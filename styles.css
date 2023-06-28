@@ -13,6 +13,7 @@ left: 0;
 
 .bottomleft {
 position: absolute;
+color: chartreuse;
 bottom: 0;
 left: 0;
 }
