@@ -1,12 +1,1 @@
-
-#G
-google.com, pub-2730263451308801, DIRECT, f08c47fec0942fa0
-google.com, pub-5200956238394958, DIRECT, f08c47fec0942fa0
-google.com, pub-1203149545224208, DIRECT, f08c47fec0942fa0
-
-
-#adsense
-google.com, pub-6876839235899176, DIRECT, f08c47fec0942fa0
-google.com, pub-1203149545224208, DIRECT, f08c47fec0942fa0
-
-unibots.in, 144261, DIRECT
+google.com, pub-3156556112169425, DIRECT, f08c47fec0942fa0
