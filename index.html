@@ -92,6 +92,33 @@ src="https://www.facebook.com/tr?id=1460759414480116&ev=PageView&noscript=1"
 <!-- End Meta Pixel Code -->
 
 
+
+<!-- ==== FB SDK start ===== -->
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{your-app-id}',
+      cookie     : true,
+      xfbml      : true,
+      version    : '{api-version}'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- ==== FB SDK end ===== -->
+
 </head>
 
 <body>
