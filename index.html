@@ -91,10 +91,23 @@ src="https://www.facebook.com/tr?id=1460759414480116&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 
+<!-- End Meta Sign IN  -->
 
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : '406058305263818',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v18.0'
+    });
+  };
+</script>
+<script async defer crossorigin="anonymous"
+  src="https://connect.facebook.net/en_US/sdk.js">
+</script>
 
-
-
+<!-- End Meta Sign IN  -->
 
 </head>
 
@@ -121,6 +134,34 @@ src="https://www.facebook.com/tr?id=1460759414480116&ev=PageView&noscript=1"
 
 
 <!-- ==== FB SDK end ===== -->
+
+<!-- ==== WA Sign Up SDK end ===== -->
+  <script>
+  // Facebook Login with JavaScript SDK
+  function launchWhatsAppSignup() {
+    // Launch Facebook login
+    FB.login(function (response) {
+      if (response.authResponse) {
+        const accessToken = response.authResponse.accessToken;
+        //Use this token to call the debug_token API and get the shared WABA's ID
+      } else {
+        console.log('User cancelled login or did not fully authorize.');
+      }
+    }, {
+      config_id: '<CONFIG_ID>', // configuration ID obtained in the previous step goes here
+      response_type: 'code',     // must be set to 'code' for System User access token
+      override_default_response_type: true,
+      extras: {
+        setup: {
+          ... // Prefilled data can go here
+        }
+      }
+    });
+  }
+</script>
+<!-- ==== WA Sign Up SDK end ===== -->
+
+  
   
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top ">
@@ -136,7 +177,10 @@ src="https://www.facebook.com/tr?id=1460759414480116&ev=PageView&noscript=1"
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li><fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button></li>
+          <button onclick="launchWhatsAppSignup()"
+  style="background-color: #1877f2; border: 0; border-radius: 4px; color: #fff; cursor: pointer; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: bold; height: 40px; padding: 0 24px;">
+  Login with Facebook
+</button>
           
 <!--           <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li> -->
 
